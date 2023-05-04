@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: yellow;
+  font-weight: 600;
+}
+body {
+  background-color: black;
+  font-family: "Titillium Web", sans-serif;
+  padding: 1rem 5rem 2rem;
+}
+header img {
+  width: 20rem;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.card-container {
+  background-image: url(images/artetus.png);
+  color: white;
+  border-radius: 5px;
+  margin: 1.2rem;
+  padding: 1.2rem;
+  width: 30%;
+}
+.date {
+  color: grey;
+  margin-bottom: 1.2rem;
+}
+.card-container:hover {
+  box-shadow: rgb(32, 152, 209) 0px 0px 10px 3px, rgb(0, 0, 0) 0px 0px 10px;
+}
+.summary {
+  padding-bottom: 2rem;
+}
+.card-container a {
+  padding-top: 1rem;
+  width: 100%;
+  display: block;
+  border-top: 2px solid rgb(142, 46, 46);
+}
+.movies-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
