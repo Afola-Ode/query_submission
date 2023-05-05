@@ -1,9 +1,8 @@
-import React from 'react'
-
+import React from "react";
+import ContactForm from "./components/form";
+import "./App.css"
 const App = () => {
-  return (
-    <div>App</div>
-  )
-}
+  return <ContactForm />;
+};
 
-export default App
+export default App;
