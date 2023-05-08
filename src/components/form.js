@@ -4,12 +4,9 @@ import loading from "../images/loading.gif"
 
 function ContactForm() {
   const [name, setName] = useState("");
-  const [nameError, setNameError] = useState("");
   const [email, setEmail] = useState("");
-  const [emailError, setEmailError] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
-  const [messageError, setMessageError] = useState("");
   const [formStatus, setFormStatus] = useState(null);
 
   const handleSubmit = (event) => {
@@ -21,24 +18,6 @@ function ContactForm() {
       subject,
       message,
     };
-
-    // Validate input fields
-    if (!name) {
-      setNameError("Name is required");
-      return;
-    }
-    if (!email) {
-      setEmailError("Email is required");
-      return;
-    }
-    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setEmailError("Invalid email address");
-      return;
-    }
-    if (!message) {
-      setMessageError("Message is required");
-      return;
-    }
 
     setFormStatus("submitting");
     axios
@@ -52,9 +31,6 @@ function ContactForm() {
         setEmail("");
         setSubject("");
         setMessage("");
-        setNameError(null);
-        setEmailError(null);
-        setMessageError(null);
       })
       .catch(() => {
         setFormStatus("error");
@@ -114,7 +90,7 @@ function ContactForm() {
           {!message && <p className='text-red-500'>Message is required</p>}
         </div>
         <button type='submit'>
-          {formStatus === "submitting" ? (<img src ={loading} className="loading"/>) : "Submit"}
+          {formStatus === "submitting" ? (<img src ={loading} className="loading" alt ="loading..."/>) : "Submit"}
         </button>
       </form>
     </div>
